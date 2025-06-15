@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>平面設計Graphic Design</title>
+<link rel="stylesheet" href="./reset.css">
+<link rel="stylesheet" href="./styles_2D.css">
+<link rel="icon" href="./LOGO(w).png">
+<!-- 頁籤圖標 -->
+<!-- <link rel="short icon" href="./images/favicon.ico"> -->
+<style>
+</style>
+</head>
+
+<body>
+  <!-- 導覽列 -------------------------->
+<div class="head">
+  <!-- LOGO -->
+  <div class="logo">
+    <a href="./main.html"><img src="./images/LOGO_b.png" alt="LOGO"></a>
+  </div>
+  <!-- 選單 -->
+  <!-- 漢堡選單 -->
+  <div class="menu-icon" id="menu-icon">
+    <img src="./images/mb_menu.png" alt="手機選單">
+  </div>
+    <!-- 手機選單 -->
+<ul class="mobile-nav-list" id="mobile-nav">
+  <li><a href="./AboutMe.html">關於我</a></li>
+  <li><a href="./design_2D.html">平面設計</a></li>
+  <li><a href="./Art.html">插畫設計</a></li>
+</ul>
+  <!-- 電腦選單 -->
+  <ul class="nav-list">
+    <li><a href="./AboutMe.html">關於我</a></li>
+    <li><a href="./design_2D.html">平面設計</a></li>
+    <li><a href="./Art.html">插畫設計</a></li>
+  </ul>
+  <script>
+    const menuIcon = document.getElementById('menu-icon');
+    const mobileNav = document.getElementById('mobile-nav');
+  
+    menuIcon.addEventListener('click', () => {
+      mobileNav.classList.toggle('open');
+    });
+  </script>
+</div>
+  <!-- 導覽列結束 -------------------------->
+<!-- 貼文開始------------------------------->
+ <div class="container">
+    <div class="design">
+      <div class="title">
+           <h1><span class="blue">明星FB</span>貼文圖展示</h1>
+      </div>
+      <div class="idol">
+          <div class="idol_title1">
+              <h1>明星御用</h1>
+              <h2>Celebrity Favorite</h2>
+          </div>
+          <div class="idol_pic">
+            <img src="./images/FB_01.jpg" alt="陳子璇01">
+            <img src="./images/FB_02.jpg" alt="陳子璇02">
+          </div>
+          <div class="FB_wrap">
+            <div class="idol_pic2">
+              <div class="idol_title">
+              <h1>現代潑墨</h1>
+              <h2>Ink Splashing Style</h2>
+            </div>
+              <img src="./images/FB_03.jpg" alt="潑墨">
+            </div>
+            <div class="idol_pic3">
+              <div class="idol_title">
+                <h1>形象幾何</h1>
+                <h2>Abstract Geometry</h2>
+            </div>
+              <img src="./images/FB_04.jpg" alt="幾何">
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- 貼文結束---------------------------->
+<!-- 品牌形象廣告圖開始------------------->
+<div class="container">
+  <div class="AD">
+      <div class="title">
+        <h1><span class="blue">品牌形象</span>廣告圖</h1>
+      </div>
+    <div class="AD_pic01">
+      <img src="./images/AD_pic_01.png" alt="品牌形象01">
+      <img src="./images/AD_pic_02.png" alt="品牌形象02">
+    </div>
+    <div class="AD_pic02">
+      <img src="./images/AD_pic_03.png" alt="品牌形象03">
+      <img src="./images/AD_pic_04.png" alt="品牌形象04">
+      <img src="./images/AD_pic_05.png" alt="品牌形象05">
+    </div>
+    <div class="AD_pic03">
+      <img src="./images/AD_pic_06.png" alt="品牌形象06">
+      <img src="./images/AD_pic_07.png" alt="品牌形象07">
+    </div>
+    <div class="AD_pic04">
+      <img src="./images/AD_pic_08.png" alt="品牌形象08">
+      <img src="./images/AD_pic_09.png" alt="品牌形象09">
+    </div>
+  </div>
+</div>
+<!-- 品牌形象廣告圖結束------------------->
+<!-- 產品包裝設計開始------------------->
+<div class="container">
+  <div class="product">
+    <!-- 標題 -->
+    <div class="title">
+      <h1><span class="blue">產品包裝</span>設計</h1>
+    </div>
+    <!-- 圖片容器 -->
+    <div class="PD_Container">
+      <div class="PD_01">
+        <img src="./images/PD_pic_01.png" alt="產品包裝01">
+      </div>
+      <div class="PD_02">
+        <img src="./images/PD_pic_02.png" alt="產品包裝02">
+        <img src="./images/PD_pic_03.png" alt="產品包裝03">
+      </div>
+    </div>
+      <div class="PD_03">
+        <img src="./images/PD_pic_04.png" alt="產品包裝04">
+        <img src="./images/PD_pic_05.png" alt="產品包裝05">
+      </div>
+      <div class="bird">
+          <img src="./images/bird_01.png" alt="鳥01">
+      </div>
+      <div class="bird2">
+        <img src="./images/bird_02.png" alt="鳥02">
+      </div>
+  </div>
+</div>
+<!-- MB產品包裝設計開始------------------->
+<div class="container">
+  <div class="MB_PD_Container">
+      <!-- 標題 -->
+        <div class="title">
+            <h1><span class="blue">產品包裝</span>設計</h1>
+        </div>
+        <div class="MB_pic">
+            <div class="MB0102">
+                <div class="MBPD_01"></div>
+                <div class="MBPD_02"></div>
+            </div>
+            <div class="MB0304">
+              <div class="MBPD_03"></div>
+              <div class="MBPD_04"></div>
+            </div>
+        </div>
+        <div class="MB0506">
+          <div class="MBPD_05"></div>
+          <div class="MBPD_06"></div>
+        </div>
+  </div>
+</div>
+<!-- 產品包裝設計結束------------------->
+<div class="logoback">
+  <p>&lt;點擊LOGO回到首頁&gt;</p>
+</div>
+<!-- 尾頁開始------------------>
+
+  <div class="footpage">
+    <div class="copyright">
+      <p>&copy;2023-2025 陳祉妘版權所有.翻印必究 CHEN CHIUNG YUN All Rights Reserved.&nbsp;&nbsp;
+        聯絡電話:0987365720 &nbsp;&nbsp;E-mail:a365720@gmail.com
+      </p>
+    </div>
+    <div class="copyrightMB">
+      <p>&copy;2023-2025 陳祉妘版權所有.翻印必究 CHEN CHIUNG YUN All Rights Reserved.<br>
+        聯絡電話:0987365720 <br>
+        E-mail:a365720@gmail.com
+      </p>
+    </div>
+  </div>  
+<!-- 尾頁結束------------------>  
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

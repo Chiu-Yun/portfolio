@@ -1,0 +1,618 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+/* #region大環境start */
+body {
+    font-family: "Outfit", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+h1{
+    font-weight: 600;
+    font-size: 40px;
+    margin-right: 10px;
+}
+h3{
+    font-weight: 400;
+    font-size: 25px;
+}
+p{
+    font-size: 20px;
+}
+.container{
+    width: 1440px;
+    margin: 0 auto;
+    /* background-color: #9a9a9a;  */
+    position: relative;
+}
+html,body{
+    width: 100%;
+    height: 100%;}
+/* #endregion大環境end */
+/* #region頂部導航條start */
+.head{
+    height: 90px;
+    background-color:#C6DEDC;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000
+}
+.head .menu-icon{
+    display: none;
+}
+.logo img{
+    width: 90px;
+    height: 90px;
+    margin-left: 20px;   
+}
+.head .nav-list{
+    display: flex;
+    font-size: 20px;
+    font-weight: 600;
+}
+.head .nav-list li{
+    border-right: solid  1px #666;
+}
+
+.head .nav-list li a{
+    padding: 0 20px;
+    color: #2d2d2d;
+    transition: .3s;
+}
+.head .nav-list li:nth-child(2) a{
+    color: #598891
+}
+.head .nav-list li a:hover{
+    display: inline-block;
+    color: #598891;
+    transform:translateY(-3px);
+}
+.head .nav-list li:last-child {
+    border-right:none;
+}
+.mobile-nav-list {
+    max-height: 0;
+    overflow: hidden;
+    flex-direction: column;
+    background-color: rgba(226, 241, 240, 0.8);;
+    position: absolute;
+    top: 60px;
+    width: 120px;
+    right: 0;
+    z-index: 999;
+    font-size: 18px;
+    font-weight: 600;
+    transition: max-height 0.6s ease;
+}
+.mobile-nav-list.open {
+    max-height: 300px; /* 根據你項目的數量調整高度 */
+}
+.mobile-nav-list li {
+    border-bottom: 1px solid #ffffff;
+    text-align: center;
+    
+}
+.mobile-nav-list li a {
+    display: block;
+    padding: 15px;
+    color: #4E86A1;
+    text-decoration: none;
+}
+.mobile-nav-list li a:hover {
+    background-color: #bdd3d1;
+}
+
+/* #endregion頂部導航條end */
+
+/* #region貼文圖start */
+
+.design .title{
+    margin-top: 90px;
+    height: 80px;
+    /* background-color: #a34848; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+span{
+    color: #4E86A1;
+}
+.design .title h1 {
+    margin: 0 20px; 
+}
+.design .title::before,
+.design .title::after {
+    content: "";
+    flex-grow: 0;
+    width: 380px;
+    height: 1px; 
+    background-color: black; 
+}
+.design .idol{
+    width: 100%;
+}
+.design .idol_title1{
+    padding: 0 150px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    flex: 1
+}
+.design .idol_title{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    flex: 1
+}
+
+.design .idol_pic{
+    max-width: 100%;
+    /* width: 100%;  */
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+.idol_pic img {
+    max-width: 100%;
+    height: auto; 
+    object-fit: cover; 
+}
+
+.idol .FB_wrap{
+    display: flex;
+    justify-content: center;
+    margin:30px 0;
+}
+
+/* #endregion貼文圖start */
+
+/* #region品牌形象廣告圖start */
+.AD{
+    width: 100%;
+}
+.AD .title{
+    display: flex;
+    height: 84px;
+    align-items: center;
+    justify-content: center;
+}
+.AD .title::before,
+.AD .title::after {
+    content: "";
+    /* flex-grow: 1; */
+    width: 390px;
+    height: 1px; 
+    background-color: black; 
+}
+.AD .title h1 {
+    margin: 0 50px; 
+}
+.AD .AD_pic01,.AD .AD_pic02,.AD .AD_pic03,.AD .AD_pic04{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.AD .AD_pic01 img{
+    max-width: 1200px;
+    height: auto;
+}
+.AD .AD_pic02,.AD .AD_pic03,.AD .AD_pic04{
+    margin-top: 10px;
+}
+.AD .AD_pic02 img{
+    max-width: 1200px;
+    height: auto;
+}
+
+
+/* #endregion品牌形象廣告圖end */
+
+/* #region產品包裝設計start */
+.MB_PD_Container{
+    display: none;
+}
+.product{
+    width: 100%;
+    margin-top: 30px;
+    padding-bottom: 10px;
+}
+.bird{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+}
+.bird2{
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    transform:rotate(-10deg);
+}
+.product .title{
+    display: flex;
+    height: 85px;
+    align-items: center;
+    justify-content: center;
+}
+.product .title::before,
+.product .title::after {
+    content: "";
+    /* flex-grow: 1; */
+    width: 450px;
+    height: 1px; 
+    background-color: black; 
+}
+.product .title h1 {
+    margin: 0 20px; 
+}
+.PD_Container{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.PD_01 {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+.product .PD_02{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content:space-between;
+        gap: 10px;
+    }
+.product .PD_03{
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+        width: 100%;
+    }
+.product .PD_03 img:nth-child(2) {
+    z-index: 1;
+    }
+
+/* #endregion產品包裝設計end */
+
+ /* #region尾頁footpagestart */
+ .logoback{
+    margin-top: 20px;
+    text-align: center;
+    color: #4E86A1;
+ }
+.copyrightMB{
+    display: none;
+}
+.copyright{
+    display: block;
+    width: 100vw; 
+}
+ .footpage{
+    width: 100vw; 
+    height:40px;
+    margin-top: 20px;
+    background-color: #2D2D2D;
+}
+
+.footpage p{
+    font-size: 14px;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+}
+
+ /* #endregion尾頁footpageend */
+
+ /* MB版本------------------------------------- */
+
+ @media (max-width: 450px){
+     /* #region手機大環境start */
+ h1{
+    font-weight: 600;
+    font-size: 24px;
+   margin-right: 10px;
+}
+p{
+    font-size: 16px;
+}
+.container{
+    display: contents;
+    width: 100%;
+}
+
+ /* #endregion手機大環境end */
+ /* #region手機頂部導航條start */
+ .container{
+    display: contents;
+    width: 100%;
+}
+h1{
+    font-weight: 600;
+    font-size: 24px;
+   margin-right: 10px;
+}
+    .head{
+        width: 100%;
+        height: 60px;
+    }
+    .MyInfor .head{
+        margin-top: 20px;
+    }
+    .logo img{
+        width: 60px;
+        height: 60px;   
+    }
+   .head .nav-list{
+        display: none;
+    }
+    .head .menu-icon{
+        display:block;
+       margin-right: 2vw;
+    }
+    .head .menu-icon img{
+        width: 50px;
+        height: 50px;
+    }
+ /* #endregion手機頂部導航條start */
+
+/* #region手機貼文圖start */
+
+.design{
+    width: 100vw;
+}
+.design .title{
+    margin-top: 60px;
+    width: 100vw;
+    height: 50px;
+}
+.design .title::before,
+.design .title::after {
+    content: "";
+    flex-grow: 1;
+    width: 0px;
+    height: 1px; 
+    background-color: black; 
+}
+.design .idol{
+    width: 100vw;
+}
+.idol .idol_title1,.idol .idol_title{
+    display: none;
+}
+.design .idol_pic{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    width: 95vw; 
+    margin: 0 auto; 
+}
+.design .idol_pic img{
+    max-width: 100%;
+    height: auto; 
+    margin:10px 0;
+}
+.idol .FB_wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    width: 95vw; 
+    margin: 0 auto; 
+}
+
+.idol .FB_wrap img{
+    max-width: 100%;
+    height: auto; 
+    margin-top: 20px; 
+}
+.idol .idol_pic3{
+    margin-top: 10px;
+}
+/* #endregion手機貼文圖end */
+
+/* #region手機品牌形象廣告圖start */
+.bird,.bird2{
+    display: none;
+}
+.AD{
+    width: 100vw;
+}
+.AD .title{
+    height: 56px;
+}
+.AD .AD_pic01,.AD .AD_pic03,.AD .AD_pic04{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.AD .AD_pic01 img,.AD .AD_pic03 img,.AD .AD_pic04 img{
+    width: 95vw;
+}
+.AD .AD_pic02{
+    width: 100%;
+    display: flex;
+}
+.AD .AD_pic02 img{
+    width:46%;
+}
+.AD .AD_pic02 img:last-child{
+    display: none;
+}
+.AD .title::before,
+.AD .title::after {
+    content: "";
+    flex-grow: 1;
+    width: 0px;
+    height: 1px; 
+    background-color: black; 
+}
+.AD .title h1 {
+    margin: 0 20px; 
+}
+
+/* #endregion品牌形象廣告圖end */
+
+/* #region手機產品包裝設計start */
+.MB_PD_Container{
+    display: block;
+}
+.product{
+    display: none;
+}
+.product .title::before,
+.product .title::after {
+    content: "";
+    flex-grow: 1;
+    width: 0px;
+    height: 1px; 
+    background-color: black; 
+}
+.MB_PD_Container{
+    width: 100%;
+    padding-bottom: 10px;
+    /* background-color: #943a3a; */
+}
+.MB_PD_Container .title::before,
+.MB_PD_Container .title::after {
+    content: "";
+    flex-grow: 1;
+    width: 0px;
+    height: 1px; 
+    background-color: black; 
+}
+.MB_PD_Container .title{
+    display: flex;
+    height: 56px;
+    align-items: center;
+    justify-content: center;
+}
+.MB_PD_Container .MB_pic{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+}
+
+.MB_PD_Container .MBPD_01,.MB_PD_Container .MBPD_04{
+    width: 180px;
+    height: 350px;
+    border-radius: 20px;
+}
+
+.MB_PD_Container .MBPD_02,.MB_PD_Container .MBPD_03{
+    width: 180x;
+    height: 200px;
+    margin-top: 10px;
+    border-radius: 20px;
+}
+.MB_PD_Container .MBPD_01{
+    background-image: url(./images/PD_pic_01.png);
+    background-size:cover;
+    background-position: -20px 0;
+}
+.MB_PD_Container .MBPD_02{
+    background-image: url(./images/MB_PD_pic_04.png);
+    background-size:cover;
+}
+.MB_PD_Container .MBPD_03{
+    margin: 0;
+    background-image: url(./images/PD_pic_02.png);
+    background-size:cover;
+    background-position: -10px 0px;
+}
+.MB_PD_Container .MBPD_04{
+    margin-top: 10px;
+    background-image: url(./images/MB_PD_pic_03.png);
+    background-size:cover;
+}
+.MB_PD_Container .MB0506{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+.MB_PD_Container .MBPD_05{
+    width: 180px;
+    height: 150px;
+    border-radius: 20px;
+    background-image: url(./images/PD_pic_04.png);
+    background-position: -15px 0px;
+    background-size:cover;
+}
+.MB_PD_Container .MBPD_06{
+    width: 180px;
+    height: 150px;
+    background-color: #666;
+    border-radius: 20px;
+    background-image: url(./images/PD_pic_05.png);
+    background-size:cover;
+}
+/* #endregion手機產品包裝設計end */
+.logoback{
+    margin: 5px 0 5px 0;
+    text-align: center;
+    color: #4E86A1;
+ }
+ /* #region手機頁腳footagestart */
+.copyright{
+    display: none;
+}
+.copyrightMB{
+    display: block;
+}
+ .footpage{
+    width: 100vw; 
+    height:60px;
+    margin-top: 0px;
+    background-color: #2D2D2D;
+}
+.footpage p{
+    font-size: 10px;
+    color: white;
+    text-align: center;
+    line-height: 18px;
+}
+ /* #endregion手機頁腳footageend */
+
+
+
+
+}
+
+
+/* PC_small版本 */
+@media (min-width: 451px) and (max-width: 1300px){ 
+    h1{
+        font-weight: 600;
+        font-size: 35px;
+       margin-right: 10px;
+    }
+    h3{
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.5em;
+    }
+    p{
+        font-size: 16px;
+        line-height: 1.8em;
+    }
+.design .title::before,
+    .design .title::after {
+        content: "";
+        flex-grow: 1;
+        width: 0px;
+        height: 1px; 
+        background-color: black; 
+    }
+}

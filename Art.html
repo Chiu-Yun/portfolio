@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>插畫設計Art</title>
+<link rel="stylesheet" href="./reset.css">
+<link rel="stylesheet" href="./styles_Art.css">
+<link rel="icon" href="./LOGO(w).png">
+<!-- 頁籤圖標 -->
+<!-- <link rel="short icon" href="./images/favicon.ico"> -->
+<style>
+</style>
+</head>
+
+<body>
+  <!-- 導覽列 -------------------------->
+<div class="head">
+  <!-- LOGO -->
+  <div class="logo">
+    <a href="./main.html"><img src="./images/LOGO_b.png" alt="LOGO"></a>
+  </div>
+  <!-- 選單 -->
+  <!-- 漢堡選單 -->
+  <div class="menu-icon" id="menu-icon">
+    <img src="./images/mb_menu.png" alt="手機選單">
+  </div>
+    <!-- 手機選單 -->
+<ul class="mobile-nav-list" id="mobile-nav">
+  <li><a href="./AboutMe.html">關於我</a></li>
+  <li><a href="./design_2D.html">平面設計</a></li>
+  <li><a href="./Art.html">插畫設計</a></li>
+</ul>
+  <!-- 電腦選單 -->
+  <ul class="nav-list">
+    <li><a href="./AboutMe.html">關於我</a></li>
+    <li><a href="./design_2D.html">平面設計</a></li>
+    <li><a href="./Art.html">插畫設計</a></li>
+  </ul>
+  <script>
+    const menuIcon = document.getElementById('menu-icon');
+    const mobileNav = document.getElementById('mobile-nav');
+  
+    menuIcon.addEventListener('click', () => {
+      mobileNav.classList.toggle('open');
+    });
+  </script>
+</div>
+<!-- 導覽列結束 -------------------------->
+<!-- 白金級展示圖 -------------------------->
+<div class="container">
+  <div class="ArtDesign">
+      <div class="title">
+        <h1><span class="blue">ART-Street</span>白金級展示</h1>
+      </div>
+      <div class="art">
+          <div id="art01"><p>雪之精靈<br>Snow Sprite</p></div>
+          <div id="art02"><p>暴雨女王<br>Tempest Queen</p></div>
+          <div id="art03"><p>危險元素-汞<br>Mercury</p></div>
+          <div id="art04"><p>人魚<br>Mermaid</p></div>
+      </div>
+      <div class="art2">
+        <div id="artp1"><p>雪之精靈&nbsp;Snow Sprite</p></div>
+        <div id="artp2"><p>暴雨女王&nbsp;Tempest Queen</p></div>
+        <div id="artp3"><p>危險元素-汞&nbsp;Mercury</p></div>
+        <div id="artp4"><p>人魚&nbsp;Mermaid</p></div>
+      </div>
+    </div>
+  </div>
+      <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const cards = document.querySelectorAll('.art > div');
+  let activeCard = null;
+
+  cards.forEach(card => {
+    card.addEventListener('click', () => {
+      // 如果點擊的是已展開的卡片，則收回所有卡片
+      if (card === activeCard) {
+        cards.forEach(c => {
+          c.style.width = '300px';
+          c.style.backgroundPosition = ''; // 恢復預設背景位置
+        });
+        activeCard = null;
+      } else {
+        // 展開當前卡片，其他卡片收合並偏移背景
+        cards.forEach(c => {
+          c.style.width = '300px';
+          // 當前卡片：背景位置 0px 0px，其他卡片：背景位置 -150px 0px
+          c.style.backgroundPosition = (c === card) ? '0px 0px' : 'center 0px';
+        });
+        card.style.width = '650px';
+        activeCard = card;
+      }
+    });
+  });
+});
+      </script>
+<!-- 白金級展示圖結束 -------------------------->
+ <!-- 其他私人委託圖展示開始-------------------------->
+<div class="container">
+  <div class="OhterArt">
+    <div class="title">
+      <h1>其他私人委託圖展示</h1>
+    </div>
+    <p>手機封面Phone Wallpaper</p>
+        <div class="Artpic">
+            <img id='Artpic01'src="./images/Other_iPhone01.png" alt="維恆">
+            <img id='Artpic02'src="./images/Other_iPhone02.png" alt="賽博龐克">
+            <img id='Artpic03'src="./images/Other_iPhone03.png" alt="女王蜂">
+            <div class="bird01"><img src="./images/bird1.png" alt=""></div>
+            <div class="bird02"><img src="./images/bird2.png" alt=""></div>
+        </div>
+        <div class="MB_Artpic">
+          <img src="./images/MB_Other_iPhone.png" alt="手機版手機桌布">
+      </div>
+  </div>
+</div>
+ <!-- 其他私人委託圖-Butterfly------>
+<div class="container">
+    <div class="Butterfly">
+        <div class="Butterfly01">
+              <img src="./images/Other_Butterfly01.png" alt="蝴蝶主圖">
+        </div>
+          <div class="Butterfly02">
+                <div class="Butterfly_word">
+                    <h1>Butterfly</h1>
+                    <h3>2024.FurMIT 台灣金毛影展-入圍</h3>
+                    <p>2024 FurMIT台灣金毛影展於7/13、14兩日於宜蘭村却國際溫泉酒店，Butterfly更是在酒店內展出</p>
+                </div>
+                <div class="Butterfly_pic">
+                    <img class="Butterfly02-1" src="./images/Other_Butterfly02.png" alt="主題海報">
+                    <img class="Butterfly02-2"src="./images/Other_Butterfly03.png" alt="LOGO">
+                    <img class="Butterfly02-3"src="./images/Other_Butterfly04.png" alt="線上藝廊">
+                </div>
+          </div>
+      </div>
+  </div>
+    <div class="MB_Butterfly">
+        <div class="MB_Butterfly_word">
+            <h1>Butterfly</h1>
+            <h3>2024.FurMIT 台灣金毛影展-入圍</h3>
+            <p>2024FurMIT台灣金毛影展於7/13、14兩日於宜蘭村却國際溫泉酒店，Butterfly更是在酒店內展出</p>
+      </div>
+        <div class="MB_Butterfly01">
+            <img src="./images/Other_Butterfly01.png" alt="蝴蝶主圖">
+        </div>
+        <div class="MB_Butterfly_pic">
+          <img class="MBButterfly02-2"src="./images/Other_Butterfly03.png" alt="LOGO">
+          <img class="MBButterfly02-1" src="./images/Other_Butterfly02.png" alt="主題海報">
+    </div>
+</div>
+ <!-- 其他私人委託圖-Butterfly結束------>
+ <div class="container">
+    <div class="other">
+        <img src="./images/Other_4-1.png" alt="粉樹澆水">
+        <img src="./images/Other_4-2.png" alt="KRV">
+        <div class="ot">
+          <div class="ot1">
+            <img src="./images/Other_4-3.png" alt="夜色">
+            <img src="./images/Other_4-5.png" alt="魁">
+          </div>
+          <div class="ot2">
+            <img src="./images/Other_4-4.png" alt="粉毛">
+            <img src="./images/Other_4-6.png" alt="TIYA">
+          </div>
+        </div>
+    </div>
+ </div>
+
+
+ <!-- 其他私人委託圖展示結束-------------------------->
+<!-- 尾頁開始------------------>
+<div class="logoback">
+  <p>&lt;點擊LOGO回到首頁&gt;</p>
+</div>
+  <div class="footpage">
+    <div class="copyright">
+      <p>&copy;2023-2025 陳祉妘版權所有.翻印必究 CHEN CHIUNG YUN All Rights Reserved.&nbsp;&nbsp;
+        聯絡電話:0987365720 &nbsp;&nbsp;E-mail:a365720@gmail.com
+      </p>
+    </div>
+    <div class="copyrightMB">
+      <p>&copy;2023-2025 陳祉妘版權所有.翻印必究 CHEN CHIUNG YUN All Rights Reserved.<br>
+        聯絡電話:0987365720 <br>
+        E-mail:a365720@gmail.com
+      </p>
+    </div>
+  </div>  
+<!-- 尾頁結束------------------>  
+</body>
+</html>

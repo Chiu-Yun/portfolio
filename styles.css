@@ -1,0 +1,860 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+/* #region大環境start */
+body {
+    font-family: "Outfit", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+h1{
+    font-weight: 600;
+    font-size: 40px;
+}
+h3{
+    font-weight: 400;
+    font-size: 25px;
+}
+p{
+    font-size: 20px;
+}
+.container{
+    width: 1440px;
+    margin: 0 auto;
+    /* background-color: #9a9a9a; */
+}
+html,body{
+    width: 100%;
+    height: 100%;}
+
+span{
+    color: #4E86A1;
+}    
+/* #endregion大環境end */
+/* #region頂部導航條start */
+.head{
+    height: 90px;
+    background-color:#C6DEDC;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000
+}
+.head .menu-icon{
+    display: none;
+    margin-right: 20px;
+}
+.logo img{
+    width: 90px;
+    height: 90px;
+    margin-left: 20px;   
+}
+.head .nav-list{
+    display: flex;
+    font-size: 20px;
+    font-weight: 600;
+}
+.head .nav-list li{
+    border-right: solid  1px #666;
+}
+.head .nav-list li a{
+    padding: 0 20px;
+    color: #2d2d2d;
+    transition: .3s;
+}
+.head .nav-list li a:hover{
+    display: inline-block;
+    color: #598891;
+    transform:translateY(-3px);
+}
+.head .nav-list li:last-child {
+    border-right:none;
+}
+.mobile-nav-list {
+    max-height: 0;
+    overflow: hidden;
+    flex-direction: column;
+    background-color: rgba(226, 241, 240, 0.8);;
+    position: absolute;
+    top: 60px;
+    width: 120px;
+    right: 0;
+    z-index: 999;
+    font-size: 18px;
+    font-weight: 600;
+    transition: max-height 0.6s ease;
+}
+.mobile-nav-list.open {
+    max-height: 300px; /* 根據你項目的數量調整高度 */
+}
+.mobile-nav-list li {
+    border-bottom: 1px solid #ffffff;
+    text-align: center;
+    
+}
+.mobile-nav-list li a {
+    display: block;
+    padding: 15px;
+    color: #4E86A1;
+    text-decoration: none;
+}
+.mobile-nav-list li a:hover {
+    background-color: #bdd3d1;
+}
+
+
+/* #endregion頂部導航條end */
+
+/* #region自我介紹start */
+
+ .CL{
+    color: #4E86A1;
+    font-weight: 600;
+
+}
+.MyInfor{
+    display: flex;
+    justify-content: center;
+    height: auto;
+    margin-top: 120px;
+    padding: 0 220px 16px 16px;
+    
+}
+.MyInfor .headpic{
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* background-color: #498ebc; */
+}
+.MyInfor .headpic img{
+    width: 70%;
+}
+.MyInfor .Info{
+    line-height: 3em;
+    align-content: center;
+    width: 60%;
+    /* background-color: #ab3030; */
+
+}
+.MyInfor .design-logo{
+    height: 56px;
+    display:flex;
+    align-content: center;
+    margin-top:12px;
+}
+.MyInfor .design-logo img{
+    margin-right:20px;
+}
+
+/* #endregion自我介紹end */
+
+/* #region我能做什麼start */
+.WhatIDO{
+    /* background-color: #7bc28a; */
+    width: 100%;
+    height: auto;
+    padding-bottom: 30px;
+}
+.WhatIDO .title{
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; 
+}
+.WhatIDO .title::before,
+.WhatIDO .title::after {
+    content: "";
+    /* flex-grow: 1; */
+    width: 370px;
+    height: 1px; 
+    background-color: black; 
+}
+.WhatIDO .art_MB{
+    display: none;
+}
+.WhatIDO .pic{
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 20px 0;
+}
+.WhatIDO .pic img{
+    width: 22%;
+
+}
+.WhatIDO .pic .design{
+    margin: 0 24px;
+}
+/* #endregion我能做什麼end */
+
+/* #region雅詩蘭黛EDM聯合start */
+.MB_EL_EDM{
+    display: none;
+}
+.EL_EDM{
+    width: 100%;
+    /* background-color: #614040; */
+}
+.EL_EDM .title{
+    display: flex;
+    height: 85px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; 
+}
+.EL_EDM .title::before,
+.EL_EDM .title::after {
+    content: "";
+    /* flex-grow: 1; */
+    width: 270px;
+    height: 1px; 
+    background-color: black; 
+}
+.EL_EDM .image-container{
+    width: 70%;
+    position: relative;
+    margin: auto;
+}
+.image-container a{
+    width: 100%;
+    height: auto;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container .EDM_01,.image-container .EDM_02,.image-container .EDM_03 {
+    width: 100%;
+    margin-top: 20px;
+    transition: .4s;
+    /* display: block; */
+}
+
+.light-point {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.8);
+    opacity: 0;
+    transform: translateX(-50%);
+}
+.image-container .EDM_01:hover,.image-container .EDM_02:hover,.image-container .EDM_03:hover{
+    transform: translateY(-10px);
+}
+.image-container:hover{
+    overflow: hidden;
+}
+.image-container:hover .light-point:nth-of-type(1) {
+    animation: floatUp 9s ease forwards;
+    width: 2px;
+    height: 2px;
+}
+.image-container:hover .light-point:nth-of-type(2) {
+    animation: floatUp 10s ease forwards;
+    width: 1px;
+    height: 1px;
+}
+.image-container:hover .light-point:nth-of-type(3) {
+    animation: floatUp 5s ease forwards;
+    width: 2px;
+    height: 2px;
+}
+.image-container:hover .light-point:nth-of-type(4) {
+    animation: floatUp 7s ease forwards;
+    width: 1px;
+    height: 1px;
+}
+.image-container:hover .light-point:nth-of-type(5) {
+    animation: floatUp 12s ease forwards;
+    width: 2px;
+    height: 2px;
+}
+.image-container:hover .light-point:nth-of-type(6) {
+    animation: floatUp 8s ease forwards;
+    width: 3px;
+    height: 3px;
+}
+
+@keyframes floatUp {
+    0% {
+        bottom: 15px;
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        bottom: 150px;;
+        opacity: 0;
+    }
+}
+.light-point:nth-of-type(1) { animation-duration: 3s; }
+.light-point:nth-of-type(2) { animation-duration: .5s; }
+.light-point:nth-of-type(3) { animation-duration: 5s; }
+.light-point:nth-of-type(4) { animation-duration: 9s; }
+.light-point:nth-of-type(5) { animation-duration: 1.5s;}
+.light-point:nth-of-type(6) { animation-duration: 12s;}
+
+/* #endregion雅詩蘭黛EDM聯合end */
+
+/* #region官網介面start */
+.web_OP{
+    width: 100%;
+    margin: 0 auto;
+}
+.web_OP img{
+    width: 72%;
+}
+.web_OP .title{
+    display: flex;
+    height: 85px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; 
+}
+.web_OP .title::before,.web_OP .title::after{
+    content: "";
+    /* flex-grow: 1; */
+    width: 300px;
+    height: 1px; 
+    background-color: black;   
+}
+.web_OP .web_01,.web_OP .web_02,.web_OP .web_03{
+    width: 100%;
+    /* background-color: #8b5656; */
+    text-align: center;
+    margin: 0 auto;
+}
+
+#HelloKitty,#HelloKittyOP,#EL,#ELOP,#CLHB,#CLHBOP{
+    transition: .2s;
+    height: auto;
+}
+#HelloKitty,#EL,#CLHB{
+    margin-top: 10px;
+}
+#HelloKitty:hover,#EL:hover,#CLHB:hover{
+    transform: translateY(-10px);
+}
+#HelloKittyOP,#ELOP,#CLHBOP{
+    margin: 0 auto;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden; /* 確保收起時內容不顯示 */
+    transition: opacity 0.5s ease, max-height 0.5s ease;
+}
+#HelloKittyOP.show, #ELOP.show, #CLHBOP.show {
+    opacity: 1;
+    max-height: 100%; 
+}
+
+
+/* #endregion官網介面start */
+
+ /* #region賴禮物LINEGIFTstart */
+ .LINEGIFT{
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+ }
+ .LINEGIFT p{
+    text-align: center;
+    line-height: 1.8em;
+
+ }
+ .whiteline{
+    width: 10px;
+    height: 1300px;
+    background-color: #ffffff;
+    position: absolute;
+    left: 212px;
+ }
+ .whiteline2{
+    width: 10px;
+    height: 1300px;
+    background-color: #ffffff;
+    position: absolute;
+    right: 212px;
+ }
+ .LINEGIFT .title{
+    display: flex;
+    height: 85px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; 
+ }
+ .LINEGIFT .title::before,
+ .LINEGIFT .title::after {
+     content: "";
+     /* flex-grow: 1; */
+     width: 330px;
+     height: 1px; 
+     background-color: black; 
+ }
+
+ .slideshow img {
+    width: 100%;
+    max-width: 1000px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transition:opacity .9s linear;
+}
+video{
+    width: 1000px;
+    height: auto;
+}
+.LINEGIFT .LG_MOV01,.LINEGIFT .LG_MOV02,.LINEGIFT .LG_MOV03{
+    display: flex;
+    justify-content: center;
+}
+.LG_MOV03{
+    margin-bottom: 30px;
+}
+.LINEGIFT .LGpic2{
+    width: 100%;
+    text-align: center;
+}
+.LGpic2 img{
+    width: 70%;
+}
+ /* #endregion賴禮物LINEGIFTend */
+
+ /* #region尾頁footpagestart */
+  .logoback{
+    margin: 5px 0 5px 0;
+    text-align: center;
+    color: #4E86A1;
+ }
+.copyrightMB{
+    display: none;
+}
+.copyright{
+    display: block;
+}
+ .footpage{
+    width: 100vw; 
+    height:40px;
+    margin-top: 20px;
+    background-color: #2D2D2D;
+}
+
+.footpage p{
+    font-size: 14px;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+}
+
+ /* #endregion尾頁footpageend */
+
+ /* MB版本------------------------------------- */
+
+ @media (max-width: 450px){
+ /* #region手機大環境start */
+h1{
+    font-weight: 600;
+    font-size: 24px;
+    margin-right: 10px;
+}
+h3{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5em;
+}
+p{
+    font-size: 14px;
+    line-height: 2em;
+}
+.container{
+    display: contents;
+    width: 100%;
+}
+
+ /* #endregion手機大環境end */
+ /* #region手機頂部導航條start */
+ .head{
+    height: 60px;
+}   
+ .MyInfor .head{
+        margin-top: 20px;
+    }
+    .logo img{
+        width: 60px;
+        height: 60px;   
+    }
+   .head .nav-list{
+        display: none;
+    }
+    .head .menu-icon{
+        display:block;
+       margin-right: 2vw;
+    }
+    .head .menu-icon img{
+        width: 50px;
+        height: 50px;
+    }
+/* #endregion手機頂部導航條start */
+ 
+/* #region手機個人訊息start */
+
+  .container{
+    display: contents;
+    width: 100%;
+}
+.MyInfor{
+    display: flex;
+    height: auto;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    margin-top: 60px;
+    box-sizing: border-box;
+    padding: 0;
+    /* background-color: #8b4b4b; */
+}
+.MyInfor .Info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+    max-width: 500px; 
+    padding-right:0;
+    /* background: #a06868; */
+}
+.MyInfor .Info .name{
+    display: flex;
+    align-items: center;
+}
+.MyInfor .headpic{
+    /* background-color: #4ab184; */
+    width: 90%;
+    margin: 0 auto;
+    justify-content: center;
+}
+.MyInfor .headpic img{
+    min-width: 60%; 
+    height: auto; 
+}
+.MyInfor .design-logo img{
+    width: 80%;
+    height: 80%;
+    margin-right:10px;
+}
+.MyInfor .design-logo img:last-child{
+     margin: 0;
+}
+/* #endregion手機個人訊息end */
+
+ /* #region手機我能做啥start */
+.WhatIDO .art_PC{
+    display: none;
+}
+.WhatIDO{
+    padding-bottom: 10px;
+    width: 100%;
+    background-color: #E8F5F4;
+}
+.WhatIDO .title{
+    width: 100%;
+    height: 50px;
+}
+.WhatIDO .title::before,
+.WhatIDO .title::after {
+    content: "";
+    flex-grow: 1;
+    width: 0px;
+    height: 1px; 
+    background-color: black; 
+}
+.WhatIDO .pic{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 0 10px;
+    margin: 0;
+}
+
+.WhatIDO .art_MB{
+    display: flex;
+    margin: auto;
+    width:95%;
+}
+.WhatIDO .pic img{
+width:50%;
+}
+.WhatIDO .pic .design{
+    margin-left: 10px;
+}
+.WhatIDO .pic .design{
+    margin: 0;
+}
+
+/* #endregion我能做啥end */
+
+/* #region手機雅詩蘭黛start */
+.EL_EDM .image-container{
+    display: none;
+}
+.EL_EDM .image-container{
+    width:100%;
+}
+.EL_EDM .title{
+    height: 50px;
+}
+.EL_EDM .title::before,
+.EL_EDM .title::after {
+    content: "";
+    flex-grow: 1;
+    width: 0px;
+    height: 1px; 
+    background-color: black; 
+}
+.MB_EL_EDM{
+    display: flex;
+    width: 100%;
+}
+.MB_EL_EDM .MB_pic{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.MB_EL_EDM .MB_pic img{
+    width: 95vw;
+    margin-top: 5px;
+} 
+/* #endregion手機雅詩蘭黛end */
+
+/* #region手機官網界面與互動設計start */
+
+.web_OP {
+    background-color: #E8F5F4;
+    margin-top: 10px;
+}
+.web_OP .title{
+    height: 50px;
+}
+ .web_OP .web_01,.web_OP .web_02,.web_OP .web_03{
+    width: 100%;
+    margin-top: 10px;
+}
+.web_OP .web_01{
+    margin-top: 0;
+}
+ #HelloKitty,#HelloKittyOP,#EL,#ELOP,#CLHB,#CLHBOP{
+    transition: .2s;
+    width: 95vw;
+    height: auto;
+}
+#HelloKitty,#EL,#CLHB{
+    margin-top: 0px;
+}
+#HelloKitty:hover,#EL:hover,#CLHB:hover{
+    transform: translateY(0);
+}
+.web_OP .title::before,.web_OP .title::after{
+    content: "";
+    flex-grow: 1;
+    width: 0px;
+    height: 1px; 
+    background-color: black;   
+}
+ /* #endregion官網界面與互動設計end */
+ 
+ /* #region手機賴禮物LINEGIFTstart */
+ .LINEGIFT{
+    width: 95vw;
+    position: relative;
+ }
+ .LINEGIFT .title::before,
+ .LINEGIFT .title::after {
+     content: "";
+     flex-grow: 1;
+     width: 0;
+     height: 1px; 
+     background-color: black; 
+ }
+ .LINEGIFT .slideshow img {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.whiteline{
+display: none;
+ }
+ .whiteline2{
+    position: absolute;
+    width: 12px;
+    height: 490px;
+    background-color: #ffffff;
+    right:-10px;
+ }
+ .LINEGIFT .title{
+    height: 50px;
+}
+.LINEGIFT p{
+    line-height: 1.2em;
+}
+.LINEGIFT video{
+    width: 95vw;
+    height: auto;
+}
+.LG_MOV03{
+    margin-bottom: 10px;
+}
+.LGpic2{
+    width: 100%;
+}
+.LGpic2 img{
+    width: 100%;
+}
+ /* #endregion手機賴禮物LINEGIFTend */
+
+ /* #region手機頁腳footagestart */
+ .logoback{
+    margin: 5px 0 5px 0;
+    text-align: center;
+    color: #4E86A1;
+ }
+ .copyright{
+    display: none;
+}
+.copyrightMB{
+    display: block;
+}
+ .footpage{
+    width: 100vw; 
+    height:60px;
+    margin-top: 0px;
+    background-color: #2D2D2D;
+}
+.footpage p{
+    font-size: 10px;
+    color: white;
+    text-align: center;
+    line-height: 18px;
+}
+ /* #endregion手機頁腳footageend */
+}
+/* PC_small版本 */
+@media (min-width: 451px) and (max-width: 1300px){
+    h1{
+        font-weight: 600;
+        font-size: 24px;
+       margin-right: 10px;
+    }
+    h3{
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.5em;
+    }
+    p{
+        font-size: 16px;
+        line-height: 1.8em;
+    }
+    .container{
+        width: 90%;
+        /* background-color: #8b8b8b; */
+    }
+    .MyInfor{
+        width: 100%;
+        padding: 0;
+        margin:auto;
+        margin-top: 10vw;
+    }
+    .MyInfor .headpic{
+        width: 40%;
+        justify-content: center;
+            /* background-color: #a74141; */
+    }
+    .MyInfor .headpic img{
+        width: 80%;
+        min-width: 40%;
+    }
+    .MyInfor .Info{
+        width: 50%;
+            /* background-color: #592baf; */
+    }
+    .WhatIDO{
+        padding-bottom:0;
+    }
+    .WhatIDO .title::before,
+    .WhatIDO .title::after {
+    content: "";
+    flex-grow: 1;
+    width: 0;
+    }
+    .WhatIDO .pic img{
+    width: 30%;
+}
+.EL_EDM .image-container{
+    width: 100%;
+}
+.EL_EDM .title{
+    display: flex;
+    height: 85px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; 
+}
+.EL_EDM .title::before,
+.EL_EDM .title::after {
+    content: "";
+    flex-grow: 1;
+    width: 0px;
+    height: 1px; 
+    background-color: black; 
+}
+.web_OP .title::before,.web_OP .title::after{
+    content: "";
+    /* flex-grow: 1; */
+    width: 270px;
+ 
+}
+ .LINEGIFT .title::before,
+ .LINEGIFT .title::after {
+     content: "";
+     /* flex-grow: 1; */
+     width: 270px;
+ }
+.LG_MOV01 video,.LG_MOV02 video,.LG_MOV03 video{
+    width: 100%;
+}
+ .whiteline{
+    width: 5px;
+    height: 800px;
+    background-color: #ffffff;
+    position: absolute;
+    left: 0px;
+ }
+  .whiteline2{
+    position: absolute;
+    width: 5px;
+    height: 800px;
+    background-color: #ffffff;
+    right:0px;
+ }
+.LGpic2{
+    width: 100%;
+}
+.LGpic2 img{
+    width: 100%;
+}
+.web_01 img,.web_02 img,.web_03 img{
+    width: 100%;
+}
+
+}
