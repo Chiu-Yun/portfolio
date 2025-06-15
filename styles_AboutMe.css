@@ -1,0 +1,609 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+/* #region大環境start */
+body {
+    font-family: "Outfit", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+h1{
+    font-weight: 600;
+    font-size: 40px;
+}
+h3{
+    font-weight: 500;
+    font-size: 30px;
+
+}
+h4{
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 20px;
+    line-height:2;
+    letter-spacing:1.5;
+
+}
+p{
+    font-size: 20px;
+    line-height: 2;
+}
+.container{
+    width: 1440px;
+    margin: 0 auto;
+    /* background-color: #bdbdbd; */
+
+}
+html,body{
+    width: 100%;
+    height: 100%;}
+
+span{
+    color: #4E86A1;
+}    
+/* #endregion大環境end */
+/* #region頂部導航條start */
+.head{
+    height: 90px;
+    background-color:#C6DEDC;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000
+}
+.head .menu-icon{
+    display: none;
+    margin-right: 20px;
+}
+.logo img{
+    width: 90px;
+    height: 90px;
+    margin-left: 20px;   
+}
+.head .nav-list{
+    display: flex;
+    font-size: 20px;
+    font-weight: 600;
+}
+.head .nav-list li{
+    border-right: solid  1px #666;
+}
+.head .nav-list li a{
+    padding: 0 20px;
+    color: #2d2d2d;
+    transition: .3s;
+}
+.head .nav-list li a:hover{
+    display: inline-block;
+    color: #598891;
+    transform:translateY(-3px);
+}
+.head .nav-list li:last-child {
+    border-right:none;
+}
+.mobile-nav-list {
+    max-height: 0;
+    overflow: hidden;
+    flex-direction: column;
+    background-color: rgba(226, 241, 240, 0.8);;
+    position: absolute;
+    top: 60px;
+    width: 120px;
+    right: 0;
+    z-index: 999;
+    font-size: 18px;
+    font-weight: 600;
+    transition: max-height 0.6s ease;
+}
+.mobile-nav-list.open {
+    max-height: 300px; /* 根據你項目的數量調整高度 */
+}
+.mobile-nav-list li {
+    border-bottom: 1px solid #ffffff;
+    text-align: center;
+    
+}
+.mobile-nav-list li a {
+    display: block;
+    padding: 15px;
+    color: #4E86A1;
+    text-decoration: none;
+}
+.mobile-nav-list li a:hover {
+    background-color: #bdd3d1;
+}
+
+
+/* #endregion頂部導航條end */
+/* #region關於我+頭貼start */
+.Aboutme{
+    width: 80%;
+    height: auto;
+    /* background-color: #b48f8f; */
+    margin:auto;
+    margin-top: 120px;
+    margin-bottom: 30px;
+}
+.headpic{
+    width: 300px;
+    height: 300px;
+    background-size: contain;
+   background-image: url(./images/AboutMeHead.png);
+    border-radius: 30px;
+    flex-shrink: 0;
+}
+.Aboutme{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.word{
+    width: 96%;
+    overflow-wrap: break-word;
+    /* background-color: #bdb2c7; */
+}
+.word .title{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 10px;
+
+}
+.word .title::after{
+    content: "";
+    width: 300px;
+    flex-grow: 1;
+    height: 1px; 
+    background-color: black; 
+}
+.word span{
+    font-weight: 500;
+}
+/* #endregion關於我+頭貼end */
+
+/* #region求職目標start */
+.CareerObj{
+    text-align: center;
+    width: 80%;
+    height: 230px;
+    box-sizing: border-box;
+    background-color: #E8F5F4;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    margin: auto;
+}
+.CareerObj .title{
+    margin-bottom: 10px;
+}
+.CareerObj h1,.CareerObj p{
+    color: #2D2D2D;
+}
+/* #endregion求職目標end */
+
+/* #region工作經驗start */
+.WorkEx{
+    width: 80%;
+    height: auto;
+    margin: auto;
+    margin-top: 50px;
+    /* background-color: #797491; */
+    position: relative;
+
+}
+.WorkEx .bird{
+    position: absolute;
+    top: -50px;
+    left: -10px;
+}
+.WorkEx .title{
+    text-align: center;
+}
+
+.WorkContent{
+    width: 100%;
+    height: 250px;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    gap: 120px;
+    margin-top: 40px;
+    /* background-color: #c4c4c4; */
+}
+
+.WorkEx .WorkContent .title{
+    width: 400px;
+    height: 80px;
+    background-color: #9FDAD5;
+    color: white;
+    line-height: 80px;
+    text-align: center;
+    border-radius: 20px;
+}
+.WorkContent .LOGO{
+    width: 300px;
+    text-align: center;
+    line-height: 2.5;
+    /* background-color: #ac4040; */
+}
+.WorkContent .LOGO img{
+    width: 200px;
+}
+.WorkContent .list{
+    width: 400px;
+    font-size: 20px;
+    line-height: 2;
+    letter-spacing:1.5px;
+}
+
+
+/* #endregion工作經驗end */
+
+/* #region未來規劃start */
+.Plans{
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    /* background-color: #ad8787; */
+}
+.Plans .title{
+    text-align: center;
+}
+.Plans .word{
+    width: 100%;
+    line-height: 2;
+    margin: 0 auto;
+}
+.Plans .word h3{
+    line-height: 2.5;
+}
+
+
+
+/* #endregion未來規劃start */
+
+ /* #region尾頁footpagestart */
+ .logoback{
+    margin-top: 20px;
+    text-align: center;
+    color: #4E86A1;
+ }
+.copyrightMB{
+    display: none;
+}
+.copyright{
+    display: block;
+}
+ .footpage{
+    width: 100vw; 
+    height:40px;
+    margin-top: 20px;
+    background-color: #2D2D2D;
+}
+
+.footpage p{
+    font-size: 14px;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+}
+
+ /* #endregion尾頁footpageend */
+
+ /* MB版本------------------------------------- */
+
+ @media (max-width: 450px){
+ /* #region手機大環境start */
+h1{
+    font-weight: 600;
+    font-size: 24px;
+    /* margin-right: 10px; */
+}
+h3{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 40px;
+}
+h4{
+    line-height: 40px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.5em;
+}
+p{
+    font-size: 14px;
+    line-height: 2em;
+}
+.container{
+    display: contents;
+    width: 100%;
+}
+li{
+    font-size: 14px;
+}
+ul{
+    font-size: 14px;
+    line-height: 2em;
+    text-align: center;
+}
+ /* #endregion手機大環境end */
+ 
+  /* #region手機關於我start */
+.headpic{
+    width: 200px;
+    height: 200px;}
+
+.Aboutme{
+    width: 100%;
+    margin: auto;
+    margin:90px 0 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    }
+
+.word{
+     width: 95vw;}  
+.word .title{
+    flex-direction: column;
+}
+.word .title::after{
+    display: none;
+    }
+ /* #endregion關於我end */
+
+ /* #region手機頂部導航條start */
+ .head{
+    height: 60px;
+}   
+ .MyInfor .head{
+        margin-top: 20px;
+    }
+    .logo img{
+        width: 60px;
+        height: 60px;   
+    }
+   .head .nav-list{
+        display: none;
+    }
+    .head .menu-icon{
+        display:block;
+       margin-right: 2vw;
+    }
+    .head .menu-icon img{
+        width: 50px;
+        height: 50px;
+    }
+/* #endregion手機頂部導航條start */
+ 
+ /* #region手機求職目標start */
+.CareerObj{
+    width: 100%;
+    padding: 5px;
+    height: 180px;
+    border-radius: 0px;
+}
+.CareerObj .word{
+    width: 95vw;
+    margin: 0 auto;
+}
+ /* #endregion手機求職目標end */
+
+ /* #region手機工作經驗start */
+.WorkEx .bird{
+    display: none;
+}
+.WorkEx{
+    width: 100%;
+    margin: auto;
+    margin-top: 30px;
+    gap: 30px;
+}
+ .WorkContent{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    /* background-color: #c4c4c4; */
+}
+.WorkEx .WorkContent:nth-child(4) {
+    padding: 20px 0;
+    background-color: #EDF7F6;
+}
+.WorkEx .WorkContent .title{
+    width: 60vw;
+    height: 40px;
+}
+
+.WorkContent .LOGO img{
+    width: 100px;
+}
+
+
+
+
+ /* #endregion工作經驗end */
+
+/* #region手機未來規劃start */
+.Plans{
+    width: 100%;
+    background-color: #EDF7F6;
+    margin: auto;
+    margin-top: 30px;
+
+}
+.Plans .word{
+    width: 90%;
+}
+.Plans h1{
+    line-height: 2;
+}
+.Plans h4{
+    text-align: center;
+    line-height: 2;
+}
+
+
+/* #endregion未來規劃end */
+
+
+ /* #region手機頁腳footagestart */
+ .logoback{
+    margin-top: 0;
+    padding-top: 0px;
+    text-align: center;
+    color: #4E86A1;
+    background-color: #EDF7F6;
+ }
+.copyright{
+    display: none;
+}
+.copyrightMB{
+    display: block;
+}
+ .footpage{
+    width: 100vw; 
+    height:60px;
+    margin-top: 0px;
+    background-color: #2D2D2D;
+}
+.footpage p{
+    font-size: 10px;
+    color: white;
+    text-align: center;
+    line-height: 18px;
+}
+ /* #endregion手機頁腳footageend */
+}
+
+
+/* PC_small版本 */
+@media (min-width: 451px) and (max-width: 1300px){
+    h1{
+        font-weight: 600;
+        font-size: 24px;
+       margin-right: 10px;
+    }
+    h3{
+        font-weight: 400;
+        font-size: 20px;
+        text-align: center;
+    }
+    h4{
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 25px;
+    line-height:1.5;
+    letter-spacing:2px;
+    }
+    ul{
+    font-size: 16px;
+    letter-spacing:1.5px;
+    }
+    li{
+    font-size: 16px;
+    line-height:1.8; 
+    }
+    p{
+        font-size: 16px;
+        line-height: 1.8em;
+    }
+    .container{
+        width: 90%;
+        /* background-color: #a7a7a7; */
+    }
+    .MyInfor{
+        width: 100%;
+        padding: 0;
+    }
+    .MyInfor .headpic{
+        max-width: 50%;
+        justify-content: flex-end;
+    }
+    .MyInfor .headpic img{
+        max-width: 80%;
+    }
+    .MyInfor .Info{
+        width: 80%;
+    }
+    .WhatIDO .title::before,
+    .WhatIDO .title::after {
+    content: "";
+    /* flex-grow: 1; */
+    width: 20vw;
+    }
+    .WhatIDO .pic img{
+    width: 30%;
+}
+.EL_EDM .image-container{
+    width: 100%;
+}
+.EL_EDM .title{
+    display: flex;
+    height: 85px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; 
+}
+.EL_EDM .title::before,
+.EL_EDM .title::after {
+    content: "";
+    flex-grow: 1;
+    width: 0px;
+    height: 1px; 
+    background-color: black; 
+}
+.WorkContent{
+    margin-top: 10px;
+}
+.WorkContent .LOGO img{
+    width: 150px;
+}
+.WorkContent .list{
+    line-height: 1.2;
+}
+.WorkContent{
+    width: 100%;
+    height: 200px;
+    gap: 30px;
+}
+.WorkEx .bird{
+    position: absolute;
+    top: -90px;
+    left: -10px;
+}
+.CareerObj{
+    text-align: center;
+    height: 180px;
+}
+.CareerObj .word{
+    width: 100%;
+}
+.CareerObj .title{
+    margin-bottom: 10px;
+}
+.footpage {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.word .title::after{
+    content: "";
+    flex-grow: 1;
+    height: 1px; 
+    background-color: black; 
+}
+};
