@@ -701,7 +701,11 @@ width:50%;
     margin-bottom: 10px;
 }
 .whiteline{
-display: none;
+    position: absolute;
+    width: 12px;
+    height: 490px;
+    background-color: #ffffff;
+    left:-10px;
  }
  .whiteline2{
     position: absolute;
