@@ -6,6 +6,7 @@ body {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    background-color: #ffffff;
 }
 h1{
     font-weight: 600;
@@ -19,9 +20,9 @@ h3{
 h4{
     font-weight: 500;
     font-size: 32px;
-    line-height: 20px;
-    line-height:2;
-    letter-spacing:1.5;
+    /* line-height: 20px; */
+    line-height:1.5;
+    letter-spacing:1.2;
 
 }
 p{
@@ -44,7 +45,7 @@ span{
 /* #endregion大環境end */
 /* #region頂部導航條start */
 .head{
-    height: 90px;
+    height: 60px;
     background-color:#C6DEDC;
     display: flex;
     justify-content: space-between;
@@ -60,8 +61,7 @@ span{
     margin-right: 20px;
 }
 .logo img{
-    width: 90px;
-    height: 90px;
+    width: 70px;
     margin-left: 20px;   
 }
 .head .nav-list{
@@ -71,6 +71,7 @@ span{
 }
 .head .nav-list li{
     border-right: solid  1px #666;
+    font-size: 20px;
 }
 .head .nav-list li a{
     padding: 0 20px;
@@ -85,6 +86,10 @@ span{
 .head .nav-list li:last-child {
     border-right:none;
 }
+.nav-list li:nth-child(1) a {
+  color: #598891;
+}
+
 .mobile-nav-list {
     max-height: 0;
     overflow: hidden;
@@ -121,29 +126,28 @@ span{
 /* #endregion頂部導航條end */
 /* #region關於我+頭貼start */
 .Aboutme{
-    width: 80%;
+    width: 88%;
     height: auto;
     /* background-color: #b48f8f; */
     margin:auto;
     margin-top: 120px;
     margin-bottom: 30px;
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .headpic{
-    width: 300px;
-    height: 300px;
+    width: 18vw;
+    height: 18vw;
     background-size: contain;
    background-image: url(./images/AboutMeHead.png);
     border-radius: 30px;
     flex-shrink: 0;
 }
-.Aboutme{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-}
 .word{
     width: 96%;
+    padding: 0 10px;
     overflow-wrap: break-word;
     /* background-color: #bdb2c7; */
 }
@@ -154,13 +158,6 @@ span{
     margin-bottom: 10px;
 
 }
-.word .title::after{
-    content: "";
-    width: 300px;
-    flex-grow: 1;
-    height: 1px; 
-    background-color: black; 
-}
 .word span{
     font-weight: 500;
 }
@@ -169,7 +166,7 @@ span{
 /* #region求職目標start */
 .CareerObj{
     text-align: center;
-    width: 80%;
+    width: 88%;
     height: 230px;
     box-sizing: border-box;
     background-color: #E8F5F4;
@@ -190,7 +187,7 @@ span{
 
 /* #region工作經驗start */
 .WorkEx{
-    width: 80%;
+    width: 90%;
     height: auto;
     margin: auto;
     margin-top: 50px;
@@ -200,8 +197,11 @@ span{
 }
 .WorkEx .bird{
     position: absolute;
-    top: -50px;
-    left: -10px;
+    top: -30px;
+    left: -0px;
+}
+.WorkEx .bird img{
+    width:80%;
 }
 .WorkEx .title{
     text-align: center;
@@ -240,7 +240,7 @@ span{
 .WorkContent .list{
     width: 400px;
     font-size: 20px;
-    line-height: 2;
+    line-height: 1.5;
     letter-spacing:1.5px;
 }
 
@@ -262,7 +262,7 @@ span{
     line-height: 2;
     margin: 0 auto;
 }
-.Plans .word h3{
+.Plans .word h4{
     line-height: 2.5;
 }
 
@@ -293,7 +293,7 @@ span{
     font-size: 14px;
     color: white;
     text-align: center;
-    line-height: 40px;
+    line-height: 20px;
 }
 
  /* #endregion尾頁footpageend */
@@ -357,9 +357,7 @@ ul{
 .word .title{
     flex-direction: column;
 }
-.word .title::after{
-    display: none;
-    }
+
  /* #endregion關於我end */
 
  /* #region手機頂部導航條start */
@@ -389,12 +387,11 @@ ul{
  /* #region手機求職目標start */
 .CareerObj{
     width: 100%;
-    padding: 5px;
     height: 180px;
     border-radius: 0px;
 }
 .CareerObj .word{
-    width: 95vw;
+    width: 90%;
     margin: 0 auto;
 }
  /* #endregion手機求職目標end */
@@ -496,7 +493,7 @@ ul{
     h1{
         font-weight: 600;
         font-size: 24px;
-       margin-right: 10px;
+       /* margin-right: 10px; */
     }
     h3{
         font-weight: 400;
@@ -506,104 +503,91 @@ ul{
     h4{
     font-weight: 500;
     font-size: 22px;
-    line-height: 25px;
     line-height:1.5;
-    letter-spacing:2px;
     }
     ul{
     font-size: 16px;
-    letter-spacing:1.5px;
     }
     li{
     font-size: 16px;
-    line-height:1.8; 
+    line-height:1.3; 
     }
     p{
         font-size: 16px;
         line-height: 1.8em;
     }
     .container{
-        width: 90%;
+        width: 100%;
         /* background-color: #a7a7a7; */
     }
-    .MyInfor{
-        width: 100%;
-        padding: 0;
-    }
-    .MyInfor .headpic{
-        max-width: 50%;
-        justify-content: flex-end;
-    }
-    .MyInfor .headpic img{
-        max-width: 80%;
-    }
-    .MyInfor .Info{
-        width: 80%;
-    }
-    .WhatIDO .title::before,
-    .WhatIDO .title::after {
-    content: "";
-    /* flex-grow: 1; */
+    .headpic{
     width: 20vw;
+    height: 20vw;
+    background-size: contain;
+   background-image: url(./images/AboutMeHead.png);
+    border-radius: 30px;
+    flex-shrink: 0;
     }
-    .WhatIDO .pic img{
-    width: 30%;
-}
-.EL_EDM .image-container{
-    width: 100%;
-}
-.EL_EDM .title{
-    display: flex;
-    height: 85px;
-    align-items: center;
-    justify-content: center;
-    gap: 20px; 
-}
-.EL_EDM .title::before,
-.EL_EDM .title::after {
-    content: "";
-    flex-grow: 1;
-    width: 0px;
-    height: 1px; 
-    background-color: black; 
-}
+    .Aboutme{
+        width: 80%;
+        height: auto;
+        /* background-color: #b48f8f; */
+        margin:auto;
+        margin-top: 90px;
+        margin-bottom: 30px;
+        gap: 10px;
+        display: flex;
+        /* flex-direction: column; */
+        justify-content: center;
+        align-items: center;
+    }
 .WorkContent{
-    margin-top: 10px;
+    margin-top: 30px;
 }
 .WorkContent .LOGO img{
-    width: 150px;
+    width: 100px;
 }
 .WorkContent .list{
-    line-height: 1.2;
+    line-height: 1.0;
 }
 .WorkContent{
     width: 100%;
     height: 200px;
-    gap: 30px;
+    gap: 15px;
+}
+.WorkEx .WorkContent .title{
+    width: 300px;
+    height: 60px;
+    background-color: #9FDAD5;
+    color: white;
+    line-height: 60px;
+    text-align: center;
+    border-radius: 20px;
 }
 .WorkEx .bird{
     position: absolute;
-    top: -90px;
-    left: -10px;
+    top: -80px;
+    left: -60px;
 }
 .CareerObj{
     text-align: center;
     height: 180px;
 }
 .CareerObj .word{
-    width: 100%;
+    width: 95%;
 }
 .CareerObj .title{
     margin-bottom: 10px;
+}
+.Plans{
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+    /* background-color: #ad8787; */
 }
 .footpage {
   margin-bottom: 0;
   padding-bottom: 0;
 }
-.word .title::after{
-    content: "";
-    flex-grow: 1;
-    height: 1px; 
-    background-color: black; 
-}
+
 };

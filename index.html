@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="device-width, initial-scale=1, user-scalable=no">
   <title>祉妘作品集YUN Portfolio</title>
 <link rel="stylesheet" href="./reset.css">
 <link rel="stylesheet" href="./styles.css">
-<link rel="icon" href="./LOGO(w).png">
+<link rel="icon" href="./images/LOGO(w).png">
 <!-- 頁籤圖標 -->
 <!-- <link rel="short icon" href="./images/favicon.ico"> -->
 <style>
@@ -63,7 +63,7 @@
       <p>目前任職於雅詩蘭黛旗下品牌- <span class="CL">倩碧(CLINIQUE)</span>的電商公司﹐負責品牌視覺圖(LINE﹑MOMO)﹐曾任職翔宇服飾電商及蘿琳亞社群貼文圖設計﹐擅長各種電腦繪圖軟體﹐也有手繪經驗﹐個性熱誠﹑負責任喜愛高效率。</p>
       <div class="design-logo">
         <img src="./images/Figma.png" alt="Figma">
-        <img src="./images/Photoshop.png" alt="Photoshop">
+        <img src="./images/Photoshop.png"alt="Photoshop">
         <img src="./images/Illustrator.png" alt="Illustrator">
         <img src="./images/InDesign.png" alt="InDesign">
         <img src="./images/Clip_Studio.png" alt="Clip_Studio">
@@ -193,8 +193,14 @@ items.forEach(item => {
             targetElement.style.maxHeight = "0px";
             targetElement.style.opacity = "0";
             setTimeout(() => {
-                targetElement.classList.remove("show");
-                targetElement.style.display = "none"; // 確保不佔位
+            targetElement.classList.remove("show");
+            targetElement.style.display = "none";
+
+            // ✅ 捲動 trigger 元素到畫面中間
+            triggerElement.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+              });
             }, 500);
         } else {
             // 展開動畫
@@ -296,7 +302,7 @@ setInterval(changeImage, 3000);
 </div>
   <div class="footpage">
     <div class="copyright">
-      <p>&copy;2023-2025 陳祉妘版權所有.翻印必究 CHEN CHIUNG YUN All Rights Reserved.&nbsp;&nbsp;
+      <p>&copy;2023-2025 陳祉妘版權所有.翻印必究 CHEN CHIUNG YUN All Rights Reserved.&nbsp;&nbsp;<br>
         聯絡電話:0987365720 &nbsp;&nbsp;E-mail:a365720@gmail.com
       </p>
     </div>

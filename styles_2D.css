@@ -6,6 +6,7 @@ body {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    background-color: #ffffff;
 }
 h1{
     font-weight: 600;
@@ -31,7 +32,7 @@ html,body{
 /* #endregion大環境end */
 /* #region頂部導航條start */
 .head{
-    height: 90px;
+    height: 60px;
     background-color:#C6DEDC;
     display: flex;
     justify-content: space-between;
@@ -46,8 +47,7 @@ html,body{
     display: none;
 }
 .logo img{
-    width: 90px;
-    height: 90px;
+    width: 70px;
     margin-left: 20px;   
 }
 .head .nav-list{
@@ -137,7 +137,7 @@ span{
     width: 100%;
 }
 .design .idol_title1{
-    padding: 0 150px;
+    padding: 0 0 0 150px;
     display: flex;
     align-items: center;
     margin-bottom: 10px;
@@ -154,7 +154,7 @@ span{
     max-width: 100%;
     /* width: 100%;  */
     display: flex;
-    gap: 10px;
+    gap: 5px;
     justify-content: center;
 }
 .idol_pic img {
@@ -305,7 +305,7 @@ span{
     font-size: 14px;
     color: white;
     text-align: center;
-    line-height: 40px;
+    line-height: 20px;
 }
 
  /* #endregion尾頁footpageend */
@@ -595,8 +595,8 @@ h1{
 @media (min-width: 451px) and (max-width: 1300px){ 
     h1{
         font-weight: 600;
-        font-size: 35px;
-       margin-right: 10px;
+        font-size: 24px;
+       /* margin-right: 10px; */
     }
     h3{
         font-weight: 400;
@@ -607,12 +607,154 @@ h1{
         font-size: 16px;
         line-height: 1.8em;
     }
+    .container{
+        width: 90%;
+        /* background-color: #8b8b8b; */
+    }
 .design .title::before,
     .design .title::after {
         content: "";
-        flex-grow: 1;
+        /* flex-grow: 1; */
         width: 0px;
         height: 1px; 
         background-color: black; 
     }
+.design .title{
+    margin-top: 60px;
+    height: 60px;
+    /* background-color: #a34848; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+span{
+    color: #4E86A1;
+}
+.design .title h1 {
+    margin: 0 20px; 
+}
+.design .title::before,
+.design .title::after {
+    content: "";
+    flex-grow: 1;
+    /* width: 300px; */
+    height: 1px; 
+    background-color: black; 
+}
+.design .idol{
+    width: 100%;
+}
+.design .idol_title1{
+    padding: 0 ;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    flex: 1
+}
+.design .idol_title{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    flex: 1
+}
+
+.design .idol_pic{
+    width: 50%; 
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    margin: auto;
+}
+.idol_pic img {
+    max-width: 100%;
+    height: auto; 
+    object-fit: cover; 
+}
+
+.idol .FB_wrap{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin:30px 0;
+}
+.idol .FB_wrap .idol_pic2,.idol .FB_wrap .idol_pic3{
+    width: 100%;
+    gap: 20px;
+}
+.idol .FB_wrap .idol_pic2 img,.idol .FB_wrap .idol_pic3 img{
+    width: 100%;
+
+}
+
+/* 品牌形象圖 */
+.AD .title{
+    display: flex;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+}
+.AD .title h1{
+    margin: 0 20px;
+}
+.AD .title::before,
+.AD .title::after {
+    content: "";
+    flex-grow: 1;
+    width: 0px;
+    height: 1px; 
+    background-color: black; 
+}
+.AD{
+    width: 100%;
+}
+.AD_pic01,.AD_pic02,.AD_pic03,.AD_pic04{
+    width: 100%;
+}
+.AD_pic01 img,.AD_pic03 img,.AD_pic04 img{
+    width: 50%;
+}
+.AD_pic02 img{
+    width: 33%;
+}
+/* 產品包裝 */
+.product{
+    width: 100%;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+.product .title{
+    display: flex;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+}
+.product .title::before,
+.product .title::after {
+    content: "";
+    flex-grow: 1;
+    width: 0px;
+    height: 1px; 
+    background-color: black; 
+}
+.PD_Container,.PD_03{
+    width: 100%;
+}
+.PD_Container .PD_02,.PD_Container .PD_01{
+    width: 100%;
+}
+.PD_Container .PD_02 img,.PD_Container .PD_01 img{
+    width: 100%;
+}
+.PD_03 img{
+    width: 50%;
+}
+ .logoback{
+    margin-top: 0px;
+    text-align: center;
+    color: #4E86A1;
+ }
+.footpage{
+    margin-top: 10px;
+}
+
 }

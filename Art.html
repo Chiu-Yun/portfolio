@@ -6,7 +6,7 @@
   <title>插畫設計Art</title>
 <link rel="stylesheet" href="./reset.css">
 <link rel="stylesheet" href="./styles_Art.css">
-<link rel="icon" href="./LOGO(w).png">
+<link rel="icon" href="./images/LOGO(w).png">
 <!-- 頁籤圖標 -->
 <!-- <link rel="short icon" href="./images/favicon.ico"> -->
 <style>
@@ -63,11 +63,70 @@
         <div id="artp1"><p>雪之精靈&nbsp;Snow Sprite</p></div>
         <div id="artp2"><p>暴雨女王&nbsp;Tempest Queen</p></div>
         <div id="artp3"><p>危險元素-汞&nbsp;Mercury</p></div>
-        <div id="artp4"><p>人魚&nbsp;Mermaid</p></div>
+        <div id="artp4"><p>人魚&nbsp;Mermaid</p>
+        </div>
+      </div>
+
+      <div class="art3">
+        <div class="slider">
+          <div class="slide"><img src="./images/ART01.png" alt="雪之精靈"></div>
+          <div class="slide"><img src="./images/ART02.png" alt="暴雨女王"></div>
+          <div class="slide"><img src="./images/ART03.png" alt="危險元素-汞"></div>
+          <div class="slide"><img src="./images/ART04.png" alt="人魚"></div>
+          <div class="slide"><img src="./images/ART01.png" alt="雪之精靈"></div>
+        </div>
+        <div class="dots">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
       </div>
     </div>
   </div>
-      <script>
+
+  <script>
+// PAD---------------------------------------
+let currentIndex = 0;
+const slideWidth = 500;
+const slideCount = 4; // 原圖數量（不包含 clone）
+const slider = document.querySelector(".slider");
+const dots = document.querySelectorAll(".dot");
+
+// 顯示某一張 slide
+function showSlide(index) {
+  slider.style.transition = "transform 0.5s ease-in-out";
+  slider.style.transform = `translateX(-${slideWidth * index}px)`;
+
+  // 更新點點（最多4個）
+  dots.forEach(dot => dot.classList.remove("active"));
+  dots[index % slideCount].classList.add("active");
+}
+
+// 下一張 slide
+function nextSlide() {
+  currentIndex++;
+
+  showSlide(currentIndex);
+
+  // ✅ 如果超過最後一張（進入 clone），在動畫後瞬間跳回第0張
+  if (currentIndex === slideCount) {
+    setTimeout(() => {
+      slider.style.transition = "none";
+      slider.style.transform = "translateX(0px)";
+      currentIndex = 0;
+    }, 500); // 等動畫跑完
+  }
+}
+
+// 開始輪播
+setInterval(nextSlide, 3000);
+
+// 初始顯示第一張
+showSlide(currentIndex);
+
+
+// PC--------------------------------------
 document.addEventListener('DOMContentLoaded', function () {
   const cards = document.querySelectorAll('.art > div');
   let activeCard = null;
@@ -84,7 +143,7 @@ document.addEventListener('DOMContentLoaded', function () {
       } else {
         // 展開當前卡片，其他卡片收合並偏移背景
         cards.forEach(c => {
-          c.style.width = '300px';
+          c.style.width = '100px';
           // 當前卡片：背景位置 0px 0px，其他卡片：背景位置 -150px 0px
           c.style.backgroundPosition = (c === card) ? '0px 0px' : 'center 0px';
         });
@@ -107,6 +166,9 @@ document.addEventListener('DOMContentLoaded', function () {
             <img id='Artpic01'src="./images/Other_iPhone01.png" alt="維恆">
             <img id='Artpic02'src="./images/Other_iPhone02.png" alt="賽博龐克">
             <img id='Artpic03'src="./images/Other_iPhone03.png" alt="女王蜂">
+            <img id='Artpic04' src="./images/IPAD_Other_iPhone01.png" alt="維恆(IPAD)">
+            <img id='Artpic05' src="./images/IPAD_Other_iPhone02.png" alt="賽博龐克(IPAD)">
+            
             <div class="bird01"><img src="./images/bird1.png" alt=""></div>
             <div class="bird02"><img src="./images/bird2.png" alt=""></div>
         </div>
@@ -175,7 +237,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </div>
   <div class="footpage">
     <div class="copyright">
-      <p>&copy;2023-2025 陳祉妘版權所有.翻印必究 CHEN CHIUNG YUN All Rights Reserved.&nbsp;&nbsp;
+      <p>&copy;2023-2025 陳祉妘版權所有.翻印必究 CHEN CHIUNG YUN All Rights Reserved.&nbsp;&nbsp;<br>
         聯絡電話:0987365720 &nbsp;&nbsp;E-mail:a365720@gmail.com
       </p>
     </div>
